@@ -4,6 +4,7 @@ import java.awt.Point;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 import model.characters.Explorer;
@@ -29,7 +30,7 @@ public class Game {
 
 	public static void loadHeroes(String filePath) throws IOException {
 		availableHeroes = new ArrayList<>();
-		BufferedReader br = new BufferedReader(new FileReader(filePath));
+		BufferedReader br = new BufferedReader(new InputStreamReader(Game.class.getResourceAsStream("/" + filePath)));
 		String line = br.readLine();
 		while (line != null) {
 			String[] sp = line.split(",");
