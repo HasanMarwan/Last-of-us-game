@@ -1,4 +1,5 @@
 package views;
+
 import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
@@ -13,19 +14,9 @@ import javax.swing.JLabel;
 import engine.Game;
 import model.characters.*;
 
-
-
 public class Main {
-	
-	
-	public static void main(String [] args) {
-	
-		StartWindow w =  new StartWindow();
-	
-	
-			
-	}
-	
+
+    public static void main(String[] args) {
+        StartWindow w = new StartWindow();
+    }
 }
-
-
