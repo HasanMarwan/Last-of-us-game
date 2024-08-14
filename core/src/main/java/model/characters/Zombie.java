@@ -2,10 +2,11 @@ package model.characters;
 
 import java.awt.Point;
 
-import model.world.CharacterCell;
 import engine.Game;
 import exceptions.InvalidTargetException;
 import exceptions.NotEnoughActionsException;
+import model.characters.Character;
+import model.world.CharacterCell;
 
 public class Zombie extends Character {
 

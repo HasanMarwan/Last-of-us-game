@@ -13,7 +13,9 @@ import exceptions.InvalidTargetException;
 import exceptions.MovementException;
 import exceptions.NoAvailableResourcesException;
 import exceptions.NotEnoughActionsException;
+import lombok.Setter;
 
+@Setter
 public abstract class Hero extends Character {
 
 	private int actionsAvailable;
