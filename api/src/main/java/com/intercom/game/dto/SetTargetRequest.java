@@ -1,7 +1,5 @@
 package com.intercom.game.dto;
 
-import java.awt.Point;
-
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,5 +8,6 @@ import lombok.Setter;
 public class SetTargetRequest {
 
     String name;
-    Point targetPoint;
+    int x;
+    int y;
 }

@@ -1,6 +1,5 @@
 package com.intercom.game.controller;
 
-import java.awt.Point;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -147,9 +146,10 @@ public class GameController {
     @PostMapping("/set-target")
     public ResponseEntity<Void> reqSetTarget(@RequestBody SetTargetRequest setTargetRequest) {
         String name = setTargetRequest.getName();
-        Point p = setTargetRequest.getTargetPoint();
+        int x = setTargetRequest.getX();
+        int y = setTargetRequest.getY();
         try {
-            gameService.setTargetHero(name, p);
+            gameService.setTargetHero(name, x,y);
             return ResponseEntity.ok().build();
         } catch (Exception e) {
             return ResponseEntity.badRequest().build();

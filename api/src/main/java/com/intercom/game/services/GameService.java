@@ -1,12 +1,14 @@
 package com.intercom.game.services;
 
-import java.awt.Point;
 import java.io.IOException;
 import java.util.ArrayList;
 
 import org.springframework.stereotype.Service;
 
-import com.intercom.game.dto.*;
+import com.intercom.game.dto.CellResponse;
+import com.intercom.game.dto.CharacterResponse;
+import com.intercom.game.dto.HeroResponse;
+import com.intercom.game.dto.ZombieResponse;
 
 import engine.Game;
 import exceptions.InvalidTargetException;
@@ -173,10 +175,10 @@ public class GameService {
         throw new NullPointerException("hero not in game yet");
     }
 
-    public void setTargetHero(String name, Point p) {
+    public void setTargetHero(String name, int x,int y) {
         for (Hero h : Game.heroes) {
             if (name.equalsIgnoreCase(h.getName())) {
-                Cell cell = Game.map[p.x][p.y];
+                Cell cell = Game.map[x][y];
                 if (cell instanceof CharacterCell) {
                     h.setTarget(((CharacterCell) cell).getCharacter());
                 }
